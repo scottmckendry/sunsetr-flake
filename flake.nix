@@ -7,7 +7,7 @@
   outputs =
     { self, nixpkgs }:
     let
-      ver = "0.7.0";
+      ver = "0.7.1";
     in
     {
       packages.x86_64-linux.sunsetr = nixpkgs.legacyPackages.x86_64-linux.stdenv.mkDerivation {
@@ -15,7 +15,7 @@
         version = "${ver}";
         src = nixpkgs.legacyPackages.x86_64-linux.fetchurl {
           url = "https://github.com/psi4j/sunsetr/releases/download/v${ver}/sunsetr-v${ver}-x86_64-linux.tar.gz";
-          sha256 = "0bcgzk1j3rwnnlp08ibc0drz0m7gp2m408yvzvvfli0fz0sikijs";
+          sha256 = "0wxrs25z7sg56fh9759b3f70wr3ph2452rd1hbdf7lmqgdmd5s4q";
         };
         phases = [
           "unpackPhase"
